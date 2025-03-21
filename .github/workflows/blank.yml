@@ -24,8 +24,7 @@ jobs:
       - name: Run a one-line script
         run: |
           echo "Changed files in the merge commit:"
-          git diff-tree --no-commit-id --name-only -r ${{ github.event.pull_request.merge_commit_sha }}
-
+          git show --pretty="format:" --name-only
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
