@@ -23,7 +23,7 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: |
-          DIFF=$(git diff HEAD origin/main -- conf/deployment.yml)
+          DIFF=$(git diff HEAD origin/main -- .github/workflows/blank.yml)
           echo "$DIFF"
 
       # Runs a set of commands using the runners shell
