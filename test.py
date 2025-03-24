@@ -1,7 +1,7 @@
 from git import Repo
 
 # Path to your Git repository
-repo_path = "path/to/your/repo"
+repo_path = "/home/runner/work/file-change/file-change"
 
 # Initialize the repository
 repo = Repo(repo_path)
