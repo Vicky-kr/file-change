@@ -11,10 +11,10 @@ if not repo.bare:
     try:
         # Get the current commit (HEAD)
         head_commit = repo.head.commit
-
+        print(head_commit)
         # Get the parent commit (HEAD~1)
         parent_commit = head_commit.parents[0]  # HEAD~1
-
+        print(parent_commit)
         # Get the diff between HEAD and HEAD~1
         diff = head_commit.diff(parent_commit)
 
