@@ -23,13 +23,7 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: |
-          if git rev-parse HEAD~1 >/dev/null 2>&1; then
-            diff_files=$(git diff HEAD~1 HEAD --name-only)
-            echo "Files changed between HEAD and HEAD~1:"
-            echo "$diff_files"
-          else
-            echo "No parent commit (HEAD~1) available."
-          fi
+          pwd
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
