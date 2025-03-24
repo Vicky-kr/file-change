@@ -9,6 +9,7 @@ repo = Repo(repo_path)
 # Ensure the repository is not bare
 if not repo.bare:
     try:
+        repo.git.fetch(depth=2)
         # Get the current commit (HEAD)
         head_commit = repo.head.commit
         print(head_commit)
