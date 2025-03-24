@@ -22,7 +22,8 @@ if not repo.bare:
         print("Files changed between HEAD and HEAD~1:")
         for diff_item in diff:
             print(diff_item.a_path)  # File path
-    except IndexError:
+    except Exceptio as e:
+        print(e)
         print("No parent commit (HEAD~1) available. This might be the first commit.")
 else:
     print("The repository is bare.")
