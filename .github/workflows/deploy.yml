@@ -33,7 +33,9 @@ jobs:
           
       # - name: Run Python script
       #   run: python test.py
-   
+      - name: Fetch the latest changes
+        run: |
+          git fetch --unshallow
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: |
