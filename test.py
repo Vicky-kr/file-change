@@ -9,7 +9,9 @@ repo = Repo(repo_path)
 # Ensure the repository is not bare
 if not repo.bare:
     try:
+        # Get the latest changes
         repo.git.fetch(unshallow=True)
+
         # Get the current commit (HEAD)
         head_commit = repo.head.commit
         print(head_commit)
