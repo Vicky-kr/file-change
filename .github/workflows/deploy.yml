@@ -49,3 +49,8 @@ jobs:
           else
             echo "Substring not found"
           fi
+      - name: Deploy deployment.yml
+        if : contains(env.diff_files, 'conf/deployment.yml')
+        run: |
+            echo "Deploying the deployment.yml files"
+          
