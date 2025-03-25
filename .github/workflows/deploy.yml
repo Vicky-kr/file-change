@@ -40,8 +40,9 @@ jobs:
           # Fetch the latest changes
           git fetch --unshallow
           git diff HEAD~1 HEAD --name-only
-          diff_files=$(git diff HEAD~1 HEAD --name-only)
-          echo "diff_files=$diff_files" >> $GITHUB_ENV
+          diff_files=$(git diff HEAD~1 HEAD --name-only | tr '\n' ',')
+          echo "diff_files=${diff_files%,}" >> $GITHUB_ENV
+          echo "$diff_files"
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
