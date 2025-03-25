@@ -43,3 +43,4 @@ jobs:
       - name: Run a multi-line script
         run: |
           echo "Files changed : $diff_files"
+          echo "$(contains($diff_files, 'deploy.yml'))"
