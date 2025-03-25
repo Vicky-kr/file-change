@@ -1,2 +1,3 @@
 test:  hello
 jobs:
+  - name: task_1
